@@ -1,0 +1,11 @@
+long[] cajon1 = new long[10];
+        for (int i = 0; i < cajon1.length; i++) {
+            cajon1[i] = i; 
+        }
+        long[] cajon2 = new long[10];
+        for (int i = 0; i < cajon2.length; i++) {
+            cajon2[i] = cajon1[i];
+        }
+        for (int i = 0; i < cajon2.length; i++) {
+       System.out.println("Elementos del segundo cajon :"+cajon2[i]);
+        }
