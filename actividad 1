@@ -1,0 +1,10 @@
+int[] valores = new int[3];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 3; i++) {
+            System.out.print("Ingrese el valor " + (i + 1) + ": ");
+            int valor = scanner.nextInt();
+            valores[i] = valor;
+        }
+        for (int i = 0; i <= valores.length - 1; i++) {
+         System.out.print("Valores ingresados en el arreglo: " + valores [i]); 
+        }
