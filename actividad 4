@@ -1,0 +1,31 @@
+int[] valores = new int[10];
+        Scanner teclado = new Scanner(System.in);
+        for (int i = 0; i < 10; i++) {
+             System.out.println("Ingrese 10 valores: ");
+            valores[i] = teclado.nextInt();
+        }
+        System.out.println("primeros valores:");
+        primerv(valores);
+        valores = eliminarValores(valores, 2, 4, 8);
+        System.out.print("con valores eliminados: ");
+       primerv(valores);
+    }
+    public static void primerv(int[] valor) {
+        for (int elem : valor) {
+            System.out.print(elem + " ");
+        }
+    }
+    public static int[] eliminarValores(int[]valor, int... posiciones) {
+        for (int i = posiciones.length - 1; i >= 0; i--) {
+            int posicion = posiciones[i];
+            if (posicion >= 0 && posicion < valor.length) {
+                for (int j = posicion; j < valor.length - 1; j++) {
+                    valor[j] = valor[j + 1];
+                }
+                int[] variables = new int[valor.length - 1];
+                System.arraycopy(valor, 0, variables, 0, valor.length - 1);
+                valor = variables;
+            }
+        }
+
+        return valor;
